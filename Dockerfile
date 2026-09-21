@@ -16,6 +16,11 @@ COPY . .
 # RUN yarn install
 RUN yarn build:ts
 
+ENV FASTIFY_ADDRESS="0.0.0.0"
+
+ARG DATABASE_URL
+ENV DATABASE_URL=${DATABASE_URL}
+
 # Stage 2: Runner (A imagem final)
 FROM node:22-alpine
 
@@ -33,7 +38,6 @@ COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/prisma.config.ts ./prisma.config.ts
-COPY --from=builder /app/.env.production ./.env
 COPY --from=builder /app/db ./db
 
 # Limpeza final de binários do Prisma e CACHE residual do sistema

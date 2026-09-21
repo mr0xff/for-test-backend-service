@@ -6,6 +6,7 @@
 generator client {
   provider = "prisma-client"
   output   = "../src/generated/prisma"
+  moduleFormat = "cjs"
 }
 
 datasource db {
@@ -19,10 +20,10 @@ model User {
 
 model Action {
   id String @id @default(uuid())
-  name TAction
+  name ACTIONS
 }
 
-enum TAction {
+enum ACTIONS {
   READ
   WRITE
   EXECUTE

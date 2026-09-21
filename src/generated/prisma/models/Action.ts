@@ -26,12 +26,12 @@ export type AggregateAction = {
 
 export type ActionMinAggregateOutputType = {
   id: string | null
-  name: $Enums.TAction | null
+  name: $Enums.ACTIONS | null
 }
 
 export type ActionMaxAggregateOutputType = {
   id: string | null
-  name: $Enums.TAction | null
+  name: $Enums.ACTIONS | null
 }
 
 export type ActionCountAggregateOutputType = {
@@ -131,7 +131,7 @@ export type ActionGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalA
 
 export type ActionGroupByOutputType = {
   id: string
-  name: $Enums.TAction
+  name: $Enums.ACTIONS
   _count: ActionCountAggregateOutputType | null
   _min: ActionMinAggregateOutputType | null
   _max: ActionMaxAggregateOutputType | null
@@ -157,7 +157,7 @@ export type ActionWhereInput = {
   OR?: Prisma.ActionWhereInput[]
   NOT?: Prisma.ActionWhereInput | Prisma.ActionWhereInput[]
   id?: Prisma.StringFilter<"Action"> | string
-  name?: Prisma.EnumTActionFilter<"Action"> | $Enums.TAction
+  name?: Prisma.EnumACTIONSFilter<"Action"> | $Enums.ACTIONS
 }
 
 export type ActionOrderByWithRelationInput = {
@@ -170,7 +170,7 @@ export type ActionWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.ActionWhereInput | Prisma.ActionWhereInput[]
   OR?: Prisma.ActionWhereInput[]
   NOT?: Prisma.ActionWhereInput | Prisma.ActionWhereInput[]
-  name?: Prisma.EnumTActionFilter<"Action"> | $Enums.TAction
+  name?: Prisma.EnumACTIONSFilter<"Action"> | $Enums.ACTIONS
 }, "id">
 
 export type ActionOrderByWithAggregationInput = {
@@ -186,42 +186,42 @@ export type ActionScalarWhereWithAggregatesInput = {
   OR?: Prisma.ActionScalarWhereWithAggregatesInput[]
   NOT?: Prisma.ActionScalarWhereWithAggregatesInput | Prisma.ActionScalarWhereWithAggregatesInput[]
   id?: Prisma.StringWithAggregatesFilter<"Action"> | string
-  name?: Prisma.EnumTActionWithAggregatesFilter<"Action"> | $Enums.TAction
+  name?: Prisma.EnumACTIONSWithAggregatesFilter<"Action"> | $Enums.ACTIONS
 }
 
 export type ActionCreateInput = {
   id?: string
-  name: $Enums.TAction
+  name: $Enums.ACTIONS
 }
 
 export type ActionUncheckedCreateInput = {
   id?: string
-  name: $Enums.TAction
+  name: $Enums.ACTIONS
 }
 
 export type ActionUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.EnumTActionFieldUpdateOperationsInput | $Enums.TAction
+  name?: Prisma.EnumACTIONSFieldUpdateOperationsInput | $Enums.ACTIONS
 }
 
 export type ActionUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.EnumTActionFieldUpdateOperationsInput | $Enums.TAction
+  name?: Prisma.EnumACTIONSFieldUpdateOperationsInput | $Enums.ACTIONS
 }
 
 export type ActionCreateManyInput = {
   id?: string
-  name: $Enums.TAction
+  name: $Enums.ACTIONS
 }
 
 export type ActionUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.EnumTActionFieldUpdateOperationsInput | $Enums.TAction
+  name?: Prisma.EnumACTIONSFieldUpdateOperationsInput | $Enums.ACTIONS
 }
 
 export type ActionUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.EnumTActionFieldUpdateOperationsInput | $Enums.TAction
+  name?: Prisma.EnumACTIONSFieldUpdateOperationsInput | $Enums.ACTIONS
 }
 
 export type ActionCountOrderByAggregateInput = {
@@ -239,8 +239,8 @@ export type ActionMinOrderByAggregateInput = {
   name?: Prisma.SortOrder
 }
 
-export type EnumTActionFieldUpdateOperationsInput = {
-  set?: $Enums.TAction
+export type EnumACTIONSFieldUpdateOperationsInput = {
+  set?: $Enums.ACTIONS
 }
 
 
@@ -272,7 +272,7 @@ export type $ActionPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
   objects: {}
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    name: $Enums.TAction
+    name: $Enums.ACTIONS
   }, ExtArgs["result"]["action"]>
   composites: {}
 }
@@ -697,7 +697,7 @@ export interface Prisma__ActionClient<T, Null = never, ExtArgs extends runtime.T
  */
 export interface ActionFieldRefs {
   readonly id: Prisma.FieldRef<"Action", 'String'>
-  readonly name: Prisma.FieldRef<"Action", 'TAction'>
+  readonly name: Prisma.FieldRef<"Action", 'ACTIONS'>
 }
     
 

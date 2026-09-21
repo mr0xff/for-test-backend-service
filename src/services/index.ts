@@ -1,5 +1,1 @@
-import MessageService from "./message.service.js";
-
-export {
-  MessageService
-}
+export * from "./user.service";

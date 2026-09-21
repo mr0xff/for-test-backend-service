@@ -627,9 +627,9 @@ export type StringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 
 
 
 /**
- * Reference to a field of type 'TAction'
+ * Reference to a field of type 'ACTIONS'
  */
-export type EnumTActionFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'TAction'>
+export type EnumACTIONSFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ACTIONS'>
     
 
 
