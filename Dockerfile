@@ -3,6 +3,9 @@ FROM node:22-alpine AS builder
 
 WORKDIR /app
 
+ARG DATABASE_URL="file:./db/prod.db"
+ENV DATABASE_URL=${DATABASE_URL}
+
 # # Copia apenas o necessário para as dependências
 COPY package.json yarn.lock .
 COPY prisma ./prisma
@@ -13,8 +16,11 @@ RUN yarn install --frozen-lockfile
 
 # # Copia o código e compila
 COPY . . 
+
 # RUN yarn install
+RUN yarn prisma generate
 RUN yarn build:ts
+RUN yarn prisma db push
 
 # Stage 2: Runner (A imagem final)
 FROM node:22-alpine
@@ -39,12 +45,14 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/prisma.config.ts ./prisma.config.ts
 COPY --from=builder /app/db ./db
+COPY --from=builder /app/tsconfig.json .
 
 # Limpeza final de binários do Prisma e CACHE residual do sistema
-# RUN rm -rf node_modules/@prisma/engines && \
-#     rm -rf node_modules/@prisma/studio-core && \
-#     rm -rf /usr/local/share/.cache/yarn && \
-#     rm -rf /root/.cache
+RUN rm -rf node_modules/@prisma/engines && \
+    rm -rf node_modules/@prisma/studio-core && \
+    rm -rf /usr/local/share/.cache/yarn && \
+    rm -rf /root/.cache
+
 
 EXPOSE 3000
 

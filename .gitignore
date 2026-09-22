@@ -66,4 +66,4 @@ dist
 
 src/generated
 
-db
+db/*
