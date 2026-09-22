@@ -2,12 +2,8 @@
   "extends": "fastify-tsconfig",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src",
-    "sourceMap": true,
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "target": "ES2022",
-    "esModuleInterop": true
+    "rootDir": "./src",
+    "sourceMap": false
   },
   "include": ["src/**/*.ts"]
 }
