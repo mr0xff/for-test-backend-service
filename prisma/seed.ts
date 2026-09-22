@@ -1,5 +1,5 @@
-import { prisma } from "../src/lib/prisma";
-import { UserService } from "../src/services";
+import { prisma } from "../dist/lib/prisma";
+import { UserService } from "../dist/services/user.service";
 
 const user = new UserService(prisma);
 
