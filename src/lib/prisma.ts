@@ -1,4 +1,4 @@
-import { PrismaClient } from "../generated/prisma/client.js";
+import { PrismaClient } from "../generated/prisma/client";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 
 const adapter = new PrismaBetterSqlite3({
@@ -6,3 +6,5 @@ const adapter = new PrismaBetterSqlite3({
 });
 
 export const prisma = new PrismaClient({ adapter });
+
+export type Database = typeof prisma;

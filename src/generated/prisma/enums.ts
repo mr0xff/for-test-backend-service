@@ -9,10 +9,10 @@
 * 🟢 You can import this file directly.
 */
 
-export const TAction = {
+export const ACTIONS = {
   READ: 'READ',
   WRITE: 'WRITE',
   EXECUTE: 'EXECUTE'
 } as const
 
-export type TAction = (typeof TAction)[keyof typeof TAction]
+export type ACTIONS = (typeof ACTIONS)[keyof typeof ACTIONS]

@@ -45,21 +45,21 @@ export type StringWithAggregatesFilter<$PrismaModel = never> = {
   _max?: Prisma.NestedStringFilter<$PrismaModel>
 }
 
-export type EnumTActionFilter<$PrismaModel = never> = {
-  equals?: $Enums.TAction | Prisma.EnumTActionFieldRefInput<$PrismaModel>
-  in?: $Enums.TAction[]
-  notIn?: $Enums.TAction[]
-  not?: Prisma.NestedEnumTActionFilter<$PrismaModel> | $Enums.TAction
+export type EnumACTIONSFilter<$PrismaModel = never> = {
+  equals?: $Enums.ACTIONS | Prisma.EnumACTIONSFieldRefInput<$PrismaModel>
+  in?: $Enums.ACTIONS[]
+  notIn?: $Enums.ACTIONS[]
+  not?: Prisma.NestedEnumACTIONSFilter<$PrismaModel> | $Enums.ACTIONS
 }
 
-export type EnumTActionWithAggregatesFilter<$PrismaModel = never> = {
-  equals?: $Enums.TAction | Prisma.EnumTActionFieldRefInput<$PrismaModel>
-  in?: $Enums.TAction[]
-  notIn?: $Enums.TAction[]
-  not?: Prisma.NestedEnumTActionWithAggregatesFilter<$PrismaModel> | $Enums.TAction
+export type EnumACTIONSWithAggregatesFilter<$PrismaModel = never> = {
+  equals?: $Enums.ACTIONS | Prisma.EnumACTIONSFieldRefInput<$PrismaModel>
+  in?: $Enums.ACTIONS[]
+  notIn?: $Enums.ACTIONS[]
+  not?: Prisma.NestedEnumACTIONSWithAggregatesFilter<$PrismaModel> | $Enums.ACTIONS
   _count?: Prisma.NestedIntFilter<$PrismaModel>
-  _min?: Prisma.NestedEnumTActionFilter<$PrismaModel>
-  _max?: Prisma.NestedEnumTActionFilter<$PrismaModel>
+  _min?: Prisma.NestedEnumACTIONSFilter<$PrismaModel>
+  _max?: Prisma.NestedEnumACTIONSFilter<$PrismaModel>
 }
 
 export type NestedStringFilter<$PrismaModel = never> = {
@@ -104,21 +104,21 @@ export type NestedIntFilter<$PrismaModel = never> = {
   not?: Prisma.NestedIntFilter<$PrismaModel> | number
 }
 
-export type NestedEnumTActionFilter<$PrismaModel = never> = {
-  equals?: $Enums.TAction | Prisma.EnumTActionFieldRefInput<$PrismaModel>
-  in?: $Enums.TAction[]
-  notIn?: $Enums.TAction[]
-  not?: Prisma.NestedEnumTActionFilter<$PrismaModel> | $Enums.TAction
+export type NestedEnumACTIONSFilter<$PrismaModel = never> = {
+  equals?: $Enums.ACTIONS | Prisma.EnumACTIONSFieldRefInput<$PrismaModel>
+  in?: $Enums.ACTIONS[]
+  notIn?: $Enums.ACTIONS[]
+  not?: Prisma.NestedEnumACTIONSFilter<$PrismaModel> | $Enums.ACTIONS
 }
 
-export type NestedEnumTActionWithAggregatesFilter<$PrismaModel = never> = {
-  equals?: $Enums.TAction | Prisma.EnumTActionFieldRefInput<$PrismaModel>
-  in?: $Enums.TAction[]
-  notIn?: $Enums.TAction[]
-  not?: Prisma.NestedEnumTActionWithAggregatesFilter<$PrismaModel> | $Enums.TAction
+export type NestedEnumACTIONSWithAggregatesFilter<$PrismaModel = never> = {
+  equals?: $Enums.ACTIONS | Prisma.EnumACTIONSFieldRefInput<$PrismaModel>
+  in?: $Enums.ACTIONS[]
+  notIn?: $Enums.ACTIONS[]
+  not?: Prisma.NestedEnumACTIONSWithAggregatesFilter<$PrismaModel> | $Enums.ACTIONS
   _count?: Prisma.NestedIntFilter<$PrismaModel>
-  _min?: Prisma.NestedEnumTActionFilter<$PrismaModel>
-  _max?: Prisma.NestedEnumTActionFilter<$PrismaModel>
+  _min?: Prisma.NestedEnumACTIONSFilter<$PrismaModel>
+  _max?: Prisma.NestedEnumACTIONSFilter<$PrismaModel>
 }
 
 

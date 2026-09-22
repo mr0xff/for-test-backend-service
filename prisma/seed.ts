@@ -1,9 +1,8 @@
-import { prisma } from "../dist/lib/prisma";
-import MessageService from "../dist/services/message.service";
+import { prisma } from "../src/lib/prisma";
+import { UserService } from "../src/services";
 
-const message = new MessageService(prisma);
+const user = new UserService(prisma);
 
-await message.createUserWithAction({
-  username: "root",
-  action: "READ"
-});
+["root", "samuel", "elliot"].map(async function(name){
+  await user.add(name);
+})

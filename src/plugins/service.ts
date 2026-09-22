@@ -1,9 +1,9 @@
 import fp from "fastify-plugin";
-import MessageService from "../services/message.service.js";
-import { prisma } from "../lib/prisma.js";
+import { prisma } from "../lib/prisma";
+import { UserService } from "../services";
 
 const service = {
-  message: new MessageService(prisma)
+  user: new UserService(prisma),
 }
 
 export default fp((fastify) => {
